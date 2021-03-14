@@ -1,1 +1,16 @@
-render partial: "user.json.jb", locals: { user: @user }
+user_hash = render partial: "user.json.jb", locals: { user: @user }
+
+user_hash[:purchases] = @user.purchases.map do |purchase|
+  purchase_hash = render partial: "api/purchases/purchase.json.jb", locals: { purchase: purchase }
+
+  purchase_hash[:carted_products] = purchase.carted_products.map do |carted_product|
+    carted_product_hash = render partial: "api/carted_products/carted_product.json.jb", locals: { carted_product: carted_product }
+    carted_product_hash[:product] = render partial: "api/products/product.json.jb", locals: { product: carted_product.product }
+
+    carted_product_hash
+  end
+
+  purchase_hash
+end
+
+user_hash
