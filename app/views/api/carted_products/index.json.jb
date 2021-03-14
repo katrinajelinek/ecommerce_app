@@ -1,3 +1,9 @@
 @carted_products.map do |carted_product|
-  render partial: "carted_product.json.jb", locals: { carted_product: carted_product }
+  carted_product_hash = render partial: "carted_product.json.jb", locals: { carted_product: carted_product }
+
+  carted_product_hash[:product] = render partial: "/api/products/product.json.jb", locals: { product: carted_product.product }
+
+  carted_product_hash[:user] = render partial: "/api/users/user.json.jb", locals: { user: carted_product.user }
+
+  carted_product_hash
 end
