@@ -31,6 +31,9 @@ class Api::PurchasesController < ApplicationController
 
     if @purchase.save
       carted_products.update_all(purchase_id: @purchase.id, checkout: true)
+      carted_products.map do |carted_product|
+        carted_product.product.update(inventory: (carted_product.product.inventory - carted_product.quantity))
+      end
       render "show.json.jb"
     else
       render json: { errors: @purchases.errors.full_messages }
