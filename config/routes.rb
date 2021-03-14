@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   # EXAMPLE JSON ROUTE WITH API NAMESPACE
   namespace :api do
+    get "/carted_products" => "carted_products#index"
+    post "/carted_products" => "carted_products#create"
+    delete "/carted_products/:id" => "carted_products#destroy"
+
     get "/products" => "products#index"
     get "/products/:id" => "products#show"
     post "/products" => "products#create"
