@@ -1,3 +1,5 @@
+# Paypal Tutorial https://www.toptal.com/ruby-on-rails/ruby-on-rails-ecommerce-tutorial
+
 PayPal::SDK.configure(
   mode: ENV["PAYPAL_ENV"],
   client_id: ENV["PAYPAL_CLIENT_ID"],
