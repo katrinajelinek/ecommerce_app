@@ -26,7 +26,7 @@ class Api::PurchasesController < ApplicationController
       user_id: current_user.id,
       subtotal: calculated_subtotal,
       tax: calculated_tax,
-      total: calculated_total,
+      price_cents: calculated_total,
     )
 
     if @purchase.save

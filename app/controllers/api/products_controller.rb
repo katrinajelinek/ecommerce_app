@@ -12,7 +12,7 @@ class Api::ProductsController < ApplicationController
   def create
     @product = Product.new(
       name: params[:name],
-      price: params[:price],
+      price_cents: params[:price_cents],
       description: params[:description],
       inventory: params[:inventory],
     )
@@ -26,7 +26,7 @@ class Api::ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     @product.name = params[:name] || @product.name
-    @product.price = params[:price] || @product.price
+    @product.price_cents = params[:price_cents] || @product.price_cents
     @product.description = params[:description] || @product.description
     @product.inventory = params[:inventory] || @product.inventory
     if @product.save
