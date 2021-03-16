@@ -3,5 +3,5 @@
   user_id: purchase.user_id,
   subtotal: purchase.subtotal,
   tax: purchase.tax,
-  total: purchase.total,
+  price_cents: purchase.price_cents,
 }
