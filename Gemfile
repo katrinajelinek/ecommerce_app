@@ -47,3 +47,4 @@ gem 'jwt'
 gem "haml"
 gem "jquery-rails"
 gem "money-rails"
+gem 'paypal-sdk-rest'
