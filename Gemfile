@@ -42,3 +42,8 @@ gem 'http'
 gem 'rack-cors'
 gem 'jb'
 gem 'jwt'
+
+# Paypal gems
+gem "haml"
+gem "jquery-rails"
+gem "money-rails"
