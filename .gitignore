@@ -27,3 +27,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Paypal Tutorial https://www.toptal.com/ruby-on-rails/ruby-on-rails-ecommerce-tutorial
+/config/application.yml

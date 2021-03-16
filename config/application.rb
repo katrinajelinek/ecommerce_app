@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -33,5 +33,11 @@ module EcommerceApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Paypal Tutorial https://www.toptal.com/ruby-on-rails/ruby-on-rails-ecommerce-tutorial
+    config_file = Rails.application.config_for(:application)
+    config_file.each do |key, value|
+      ENV[key] = value
+    end unless config_file.nil?
   end
 end

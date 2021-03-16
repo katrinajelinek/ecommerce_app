@@ -4,6 +4,11 @@ class Api::PurchasesController < ApplicationController
   def index
     @purchase = current_user.purchases
     render "index.json.jb"
+
+    # Paypal tutorial code https://www.toptal.com/ruby-on-rails/ruby-on-rails-ecommerce-tutorial
+    products = Product.all
+    @products_purchase = products.where(stripe_plan_name: nil, paypal_plan_name: nil)
+    @products_subscription = products - @products_purchase
   end
 
   def show
