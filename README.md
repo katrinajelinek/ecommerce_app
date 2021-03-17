@@ -17,9 +17,10 @@ Ecommerce App is a backend app made with Ruby on Rails framework and PostgreSQL 
 # Getting Setup:
   1. Download or clone the project from Github
   2. To set up PostgreSQL with your Ruby on Rails application, user this tutorial: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos
-  3. Navigate into the project directory and run `bundle install` to install all project dependencies. You'll also need to run `rails g money_rails:initializer` for the third party API payment system that has been started
-  4. Then run `rails server` to start the web server
-  5. Open your browser and go to localhost:3000. You should see a cute "Yay! You're on Rails!" message.
+  3. Navigate into the project directory and run `bundle install` to install all project dependencies. 
+  4. You'll also need to run `rails g money_rails:initializer` for the third party API payment system that has been started
+  5. Then run `rails server` to start the web server
+  6. Open your browser and go to localhost:3000. You should see a cute "Yay! You're on Rails!" message.
 
 
 # Database Creation
