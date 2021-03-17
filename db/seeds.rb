@@ -8,9 +8,9 @@
 
 User.create!(
   {
-    first_name: "Charlotte",
-    last_name: "Webb",
-    email: "charlottewebb@gmail.com",
+    first_name: "Tami",
+    last_name: "Test",
+    email: "test@gmail.com",
     password: "password",
     password_confirmation: "password",
   },
