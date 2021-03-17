@@ -35,9 +35,9 @@ module EcommerceApp
     config.generators.system_tests = nil
 
     # Paypal Tutorial https://www.toptal.com/ruby-on-rails/ruby-on-rails-ecommerce-tutorial
-    config_file = Rails.application.config_for(:application)
-    config_file.each do |key, value|
-      ENV[key] = value
-    end unless config_file.nil?
+    # config_file = Rails.application.config_for(:application)
+    # config_file.each do |key, value|
+    #   ENV[key] = value
+    # end unless config_file.nil?
   end
 end

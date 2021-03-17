@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
         decoded_token = JWT.decode(
           token,
           Rails.application.credentials.fetch(:secret_key_base),
+          # The above line can be changed to random to avoid needing secret key when cloned from github, but would make the app much less secure
           true,
           { algorithm: "HS256" }
         )

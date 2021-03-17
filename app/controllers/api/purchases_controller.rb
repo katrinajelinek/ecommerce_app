@@ -6,9 +6,9 @@ class Api::PurchasesController < ApplicationController
     render "index.json.jb"
 
     # Paypal tutorial code https://www.toptal.com/ruby-on-rails/ruby-on-rails-ecommerce-tutorial
-    products = Product.all
-    @products_purchase = products.where(stripe_plan_name: nil, paypal_plan_name: nil)
-    @products_subscription = products - @products_purchase
+    # products = Product.all
+    # @products_purchase = products.where(stripe_plan_name: nil, paypal_plan_name: nil)
+    # @products_subscription = products - @products_purchase
   end
 
   def show
@@ -21,7 +21,7 @@ class Api::PurchasesController < ApplicationController
 
     calculated_subtotal = 0
     carted_products.each do |carted_product|
-      calculated_subtotal += carted_product.product.price * carted_product.quantity
+      calculated_subtotal += carted_product.product.price_cents * carted_product.quantity
     end
 
     calculated_tax = calculated_subtotal * 0.09
