@@ -3,7 +3,6 @@ class Api::CartedProductsController < ApplicationController
 
   def index
     @carted_products = current_user.carted_products.where(checkout: false)
-    render "index.json"
   end
 
   # I decided not to write a show function because I don't see a time when a user would want to go to their cart and only see one product in it. If they want to see a product, they'll go to the product details

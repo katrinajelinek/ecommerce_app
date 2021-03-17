@@ -3,7 +3,6 @@ class Api::PurchasesController < ApplicationController
 
   def index
     @purchase = current_user.purchases
-    render "index.json.jb"
 
     # Paypal tutorial code https://www.toptal.com/ruby-on-rails/ruby-on-rails-ecommerce-tutorial
     # products = Product.all
@@ -13,7 +12,6 @@ class Api::PurchasesController < ApplicationController
 
   def show
     @purchase = current_user.purchases.find(params[:id])
-    render "show.json.jb"
   end
 
   def create

@@ -1,5 +1,5 @@
 {
-  id: product.id
+  id: product.id,
   name: product.name,
   price_cents: product.price_cents,
   description: product.description,
